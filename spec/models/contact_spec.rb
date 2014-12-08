@@ -8,9 +8,8 @@ RSpec.describe Contact, :type => :model do
   it { should validate_uniqueness_of :email    }
 
   describe 'scopes' do
-    # TODO: make these in to factories.
-    let!(:boy)  { Contact.create!(first_name: 'naveed', last_name: 'kakal', gender: 'm', email:'naveed.kakal@gmail.com') }
-    let!(:girl) { Contact.create!(first_name: 'mystery', last_name: 'kakal', gender: 'f', email:'mystery.kakal@gmail.com') }
+    let!(:boy)  { FactoryGirl.create(:boy)  }
+    let!(:girl) { FactoryGirl.create(:girl) }
 
     it '#boys' do
       expect(described_class.boys).to include(boy)

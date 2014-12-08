@@ -1,10 +1,18 @@
+require 'faker'
+
 FactoryGirl.define do
   factory :contact do
-    first_name "MyString"
-last_name "MyString"
-email "MyString"
-phone "MyString"
-gender "MyString"
-  end
+    first_name { Faker::Name.first_name }
+    last_name  { Faker::Name.last_name }
+    email      { Faker::Internet.email }
+    phone      { Faker::PhoneNumber.cell_phone }
 
+    factory :boy do
+      gender "m"
+    end
+
+    factory :girl do
+      gender "f"
+    end
+  end
 end
