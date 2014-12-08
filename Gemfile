@@ -33,4 +33,5 @@ group :development, :test do
   gem 'pry-remote'
   gem 'rspec-rails'
   gem 'spring'
+  gem 'shoulda-matchers'
 end
