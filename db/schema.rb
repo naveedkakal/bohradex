@@ -17,11 +17,11 @@ ActiveRecord::Schema.define(version: 20141208055828) do
   enable_extension "plpgsql"
 
   create_table "contacts", force: true do |t|
-    t.string   "first_name",           null: false
-    t.string   "last_name",            null: false
-    t.string   "email",                null: false
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "email"
     t.string   "phone"
-    t.string   "gender",     limit: 1, null: false
+    t.string   "gender",     limit: 1
     t.datetime "created_at"
     t.datetime "updated_at"
   end
