@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20141208055828) do
     t.string   "first_name",           null: false
     t.string   "last_name",            null: false
     t.string   "email",                null: false
-    t.string   "phone",                null: false
+    t.string   "phone"
     t.string   "gender",     limit: 1, null: false
     t.datetime "created_at"
     t.datetime "updated_at"
