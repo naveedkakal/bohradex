@@ -5,7 +5,7 @@ class CreateContacts < ActiveRecord::Migration
       t.string :last_name
       t.string :email
       t.string :phone
-      t.string :gender, limit: 1
+      t.integer :gender, default: 0
 
       t.timestamps
     end

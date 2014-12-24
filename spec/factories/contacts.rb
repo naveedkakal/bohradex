@@ -8,11 +8,11 @@ FactoryGirl.define do
     phone      { Faker::PhoneNumber.cell_phone }
 
     factory :boy do
-      gender "m"
+      gender :male
     end
 
     factory :girl do
-      gender "f"
+      gender :female
     end
   end
 end

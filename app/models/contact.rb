@@ -4,6 +4,8 @@ class Contact < ActiveRecord::Base
   validates :email,      presence: true, uniqueness: true
   validates :gender,     presence: true
 
-  scope :boys,  -> { where(gender: 'm') }
-  scope :girls, -> { where(gender: 'f') }
+  enum gender: [:male, :female]
+
+  scope :boys,  -> { where(gender: 0) }
+  scope :girls, -> { where(gender: 1) }
 end
